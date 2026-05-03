@@ -1,0 +1,43 @@
+# Environment
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+
+# Charts (generated at runtime)
+charts/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Credentials (JANGAN PERNAH commit)
+*.json
+!requirements*.txt
+service_account.json
+google_credentials.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# APScheduler
+*.sqlite
