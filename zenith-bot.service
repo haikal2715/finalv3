@@ -1,0 +1,23 @@
+[Unit]
+Description=Zenith Stock Bot
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/zenith_bot
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/ubuntu/zenith_bot/venv/bin/python main.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=zenith-bot
+
+# Batas resource
+MemoryMax=1G
+CPUQuota=80%
+
+[Install]
+WantedBy=multi-user.target
